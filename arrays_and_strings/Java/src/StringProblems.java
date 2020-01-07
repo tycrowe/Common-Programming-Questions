@@ -1,8 +1,14 @@
+import java.util.Arrays;
+
 /**
  * @author Tyler Crowe
  * @version v1.0.0 - 1/7/2019
  */
 public class StringProblems {
+
+    public StringProblems() {
+        System.out.println(compressString("AAAAAAAaaBBbbCCcc"));
+    }
 
     /**
      * Method for compressing a string. For this algorithm, we're given a string as a parameter and
@@ -14,7 +20,20 @@ public class StringProblems {
      * @return - The compressed string.
      */
     private String compressString(String a) {
-        return null;
+        // For our new string
+        StringBuilder restr = new StringBuilder();
+        // Make a count array.
+        int[] count = new int[256];
+        for (char c : a.toCharArray()) {
+            count[(int) c] += 1;
+        }
+        for (int i = 0; i < count.length; i++) {
+            if(count[i] != 0) {
+                restr.append((char) i);
+                restr.append(count[i]);
+            }
+        }
+        return (restr.toString().length() >= a.length()) ? a : restr.toString();
     }
 
     public static void main(String[] args) {
