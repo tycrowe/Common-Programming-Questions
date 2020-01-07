@@ -6,29 +6,6 @@ import java.util.Arrays;
  */
 public class StringProblems {
 
-    public StringProblems() {
-        System.out.println(compressString("AAAAAAAaaBBbbCCcc"));
-        int[][] matrix_a = {
-                {1, 2, 3},
-                {4, 5, 6},
-                {7, 8, 9}
-        };
-        System.out.println(Arrays.deepToString(rotateSquareMatrix(matrix_a)));
-        int[][] matrix_b = {
-                {1, 2, 3, 4},
-                {5, 6, 7, 8},
-                {9, 10, 11, 12},
-                {13, 14, 15, 16}
-        };
-        System.out.println(Arrays.deepToString(rotateSquareMatrix(matrix_b)));
-        int[][] matrix_c = {
-                {1, 1, 1},
-                {1, 0, 1},
-                {1, 1, 1}
-        };
-        System.out.println(Arrays.deepToString(zeroOutMatrix(matrix_c)));
-    }
-
     /**
      * Method for compressing a string. For this algorithm, we're given a string as a parameter and
      * asked to "compress" it down to it's character and count representation. For example: The
@@ -38,7 +15,7 @@ public class StringProblems {
      * @param a - The given string to compress.
      * @return - The compressed string.
      */
-    private String compressString(String a) {
+    public String compressString(String a) {
         // For our new string
         StringBuilder restr = new StringBuilder();
         // Make a count array.
