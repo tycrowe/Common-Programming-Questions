@@ -76,7 +76,7 @@ public class StringProblems {
      * 0 1 1      0 0 0
      * 1 1 1  ->  0 1 1
      * 1 1 1      0 1 1
-     * Time complexity: O(N)
+     * Time complexity: O(N^2)
      * @param a - The given M*N matrix. Where M can be >, <, or = to N
      * @return - The newly created array.
      */
